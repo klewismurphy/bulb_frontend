@@ -1,8 +1,12 @@
 <template>
   <div class="PlantsIndex">
     <h1>{{ message }}</h1>
+    <br>
     <div v-for="plant in plants">
       {{ plant.id }}. {{ plant.scientific_name}}
+      <p><small><router-link v-bind:to="`/plants/${plant.id}`">More Details</router-link></small></p>
+      <hr width="40%">
+      <br><br>
     </div>
   </div>
 </template>

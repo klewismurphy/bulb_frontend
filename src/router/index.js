@@ -2,6 +2,7 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 import PlantsIndex from '../views/PlantsIndex.vue'
+import PlantsShow from '../views/PlantsShow.vue'
 
 
 Vue.use(VueRouter)
@@ -16,6 +17,11 @@ const routes = [
     path: '/plants',
     name: 'PlantsIndex',
     component: PlantsIndex
+  },
+  {
+    path: '/plants/:id',
+    name: 'PlantsShow',
+    component: PlantsShow
   },
   {
     path: '/about',
