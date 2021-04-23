@@ -25,7 +25,7 @@
     <p>Fruit? {{ plant.fruit_conspicuous }} </p>
     <p>Toxicity? {{ plant.toxicity }} </p>
     <hr width="50%">
-    <router-link to="/plants">Back</router-link>
+    <router-link to="/plants">Browse All</router-link> | <router-link to="/search">Search</router-link>
   </div>
 </template>
 

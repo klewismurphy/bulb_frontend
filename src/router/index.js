@@ -1,13 +1,18 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
+import Vue2Filters from 'vue2-filters'
+import vSelect from 'vue-select'
 import Home from '../views/Home.vue'
 import PlantsIndex from '../views/PlantsIndex.vue'
 import PlantsShow from '../views/PlantsShow.vue'
 import Signup from '../views/Signup.vue'
 import Login from '../views/Login.vue'
 import Logout from '../views/Logout.vue'
+import PlantSearch from '../views/PlantSearch.vue'
 
 Vue.use(VueRouter)
+Vue.use(Vue2Filters)
+Vue.component('v-select', vSelect)
 
 const routes = [
   {
@@ -39,6 +44,11 @@ const routes = [
     path: '/logout',
     name: 'logout',
     component: Logout
+  },
+  {
+    path: '/search',
+    name: 'search',
+    component: PlantSearch
   },
   {
     path: '/about',
