@@ -2,7 +2,7 @@
   <div class="PlantsShow">
     <h2>{{ plant.scientific_name }}</h2>
     <p> {{ plant.acc_symbol }} </p>
-    <button v-on:click="showPlant(plant)">Add to my Garden</button>
+    <button v-on:click="showPlant(plant)" v-if="isLoggedIn()">Add to my Garden</button>
     <hr width="20%">
     <h4> Growth Needs </h4>
     <p>Shade Tolerance: {{ plant.shade_tolerence }} </p>
@@ -61,6 +61,14 @@ export default {
     });
   },
   methods: {
+    isLoggedIn: function () {
+      console.log("logged in");
+      if (localStorage.getItem("jwt")) {
+        return true;
+      } else {
+        return false;
+      }
+    },
     showPlant: function (plant) {
       this.currentPlant = plant;
       document.querySelector("#plant-details").showModal();
