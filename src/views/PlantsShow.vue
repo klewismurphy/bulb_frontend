@@ -2,6 +2,7 @@
   <div class="PlantsShow">
     <h2>{{ plant.scientific_name }}</h2>
     <p> {{ plant.acc_symbol }} </p>
+    <button v-on:click="showPlant(plant)">Add to my Garden</button>
     <hr width="20%">
     <h4> Growth Needs </h4>
     <p>Shade Tolerance: {{ plant.shade_tolerence }} </p>
@@ -26,6 +27,17 @@
     <p>Toxicity? {{ plant.toxicity }} </p>
     <hr width="50%">
     <router-link to="/plants">Browse All</router-link> | <router-link to="/search">Search</router-link>
+
+    <dialog id="plant-details">
+      <form>
+        <h2>{{ plant.scientific_name }}</h2>
+        <v-select :options="['want to plant', 'planted']" v-model="gardenStatus"/>
+        <br>
+        <button v-on:click="createGarden()">Add to Garden</button> |
+        <br><br>
+        <button>Close</button>
+      </form>
+    </dialog>
   </div>
 </template>
 
@@ -39,6 +51,7 @@ export default {
     return {
       message: "Welcome to the show",
       plant: [],
+      gardenStatus: "",
     };
   },
   created: function () {
@@ -47,6 +60,20 @@ export default {
       this.plant = response.data;
     });
   },
-  methods: {},
+  methods: {
+    showPlant: function (plant) {
+      this.currentPlant = plant;
+      document.querySelector("#plant-details").showModal();
+    },
+    createGarden: function () {
+      var params = {
+        plant_id: this.plant.id,
+        status: this.gardenStatus,
+      };
+      axios.post("/api/gardens", params).then((response) => {
+        console.log("adding to garden...", response.data);
+      });
+    },
+  },
 };
 </script>
