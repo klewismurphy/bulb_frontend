@@ -9,6 +9,7 @@ import Signup from '../views/Signup.vue'
 import Login from '../views/Login.vue'
 import Logout from '../views/Logout.vue'
 import PlantSearch from '../views/PlantSearch.vue'
+import GardenIndex from '../views/GardenIndex.vue'
 
 Vue.use(VueRouter)
 Vue.use(Vue2Filters)
@@ -49,6 +50,11 @@ const routes = [
     path: '/search',
     name: 'search',
     component: PlantSearch
+  },
+  {
+    path: '/mygarden',
+    name: 'GardenIndex',
+    component: GardenIndex
   },
   {
     path: '/about',
