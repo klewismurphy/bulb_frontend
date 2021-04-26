@@ -14,6 +14,14 @@
     <br>
     <h3>Moisture Needs</h3>
     <v-select :options="['Low', 'Medium', 'High']" v-model="selectedMoisture"/>
+    <br>
+    <h3>Duration of the Year</h3>
+    <v-select :options="['Perennial', 'Annual', 'Biennial', 'Climate Dependent']" v-model="selectedDuration"/>
+    <br>
+    <h3>Flowering</h3>
+    <v-select :options="['Yes', 'No']" v-model="selectedFlowering"/>
+    <br>
+
 
 
 
@@ -21,8 +29,8 @@
     <br>
     <hr>
     <br>
-    <div v-for="plant in filterBy(filterBy(filterBy(plants, selectedDrought, 'drought_tolerance'), selectedShade, 'shade_tolerence'), selectedMoisture, 'moisture_needs')">
-      {{ plant.id }}. {{ plant.scientific_name}}
+    <div v-for="plant in filterBy(filterBy(filterBy(filterBy(filterBy(plants, selectedDrought, 'drought_tolerance'), selectedShade, 'shade_tolerance'), selectedMoisture, 'moisture_needs'), selectedDuration, 'duration'), selectedFlowering, 'flower_conspicuous')">
+      {{ plant.id }}. {{ plant.common_name }}
       <p><small><router-link v-bind:to="`/plants/${plant.id}`">More Details</router-link></small></p>
       <hr width="40%">
       <br><br>
@@ -47,6 +55,8 @@ export default {
       selectedDrought: "",
       selectedShade: "",
       selectedMoisture: "",
+      selectedDuration: "",
+      selectedFlowering: "",
     };
   },
   created: function () {
