@@ -27,11 +27,9 @@
             <header class="major">
               <h2>growth mindset</h2>
             </header>
-            <p>Sed lorem ipsum dolor sit amet nullam consequat feugiat consequat magna
-            adipiscing magna etiam amet veroeros. Lorem ipsum dolor tempus sit cursus.
-            Tempus nisl et nullam lorem ipsum dolor sit amet aliquam.</p>
+            <p>about stuff, what's up</p>
             <ul class="actions">
-              <li><a href="generic.html" class="button">Learn More</a></li>
+              <li><a href="/search" class="button">Start Searching</a></li>
             </ul>
           </div>
           <span class="image"><img src="images/pic01.jpg" alt="" /></span>
@@ -71,12 +69,11 @@
       <section id="second" class="main special">
         <header class="major">
           <h2>featured plants</h2>
-          <p>Donec imperdiet consequat consequat. Suspendisse feugiat congue<br />
-          posuere. Nulla massa urna, fermentum eget quam aliquet.</p>
+          <p>Figure out how to get a random selection of plants here</p>
         </header>
         <ul class="statistics">
           <li class="style1">
-            <span class="icon solid fa-code-branch"></span>
+            <span class="icon fa-pagelines"></span>
             <strong>5,120</strong> Etiam
           </li>
           <li class="style2">
@@ -96,10 +93,10 @@
             <strong>1,024</strong> Nullam
           </li>
         </ul>
-        <p class="content">Nam elementum nisl et mi a commodo porttitor. Morbi sit amet nisl eu arcu faucibus hendrerit vel a risus. Nam a orci mi, elementum ac arcu sit amet, fermentum pellentesque et purus. Integer maximus varius lorem, sed convallis diam accumsan sed. Etiam porttitor placerat sapien, sed eleifend a enim pulvinar faucibus semper quis ut arcu. Ut non nisl a mollis est efficitur vestibulum. Integer eget purus nec nulla mattis et accumsan ut magna libero. Morbi auctor iaculis porttitor. Sed ut magna ac risus et hendrerit scelerisque. Praesent eleifend lacus in lectus aliquam porta. Cras eu ornare dui curabitur lacinia.</p>
+        <p class="content"></p>
         <footer class="major">
           <ul class="actions special">
-            <li><a href="generic.html" class="button">Learn More</a></li>
+            <li><a href="/plants" class="button">Browse All Plants</a></li>
           </ul>
         </footer>
       </section>
@@ -108,13 +105,13 @@
       <section id="cta" class="main special">
         <header class="major">
           <h2>let's get some dirt under those fingernails</h2>
-          <p>Donec imperdiet consequat consequat. Suspendisse feugiat congue<br />
-          posuere. Nulla massa urna, fermentum eget quam aliquet.</p>
+          <p>make an account to start saving plants to your garden<br>
+          or log in to get back out there</p>
         </header>
         <footer class="major">
           <ul class="actions special">
-            <li><a href="generic.html" class="button primary">Get Started</a></li>
-            <li><a href="generic.html" class="button">Learn More</a></li>
+            <li><a href="/signup" class="button primary">Signup</a></li>
+            <li><a href="/login" class="button">Login</a></li>
           </ul>
         </footer>
       </section>
