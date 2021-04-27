@@ -9,10 +9,9 @@
     </div> -->
         <!-- Header -->
     <header id="header" class="alt">
-      <span class="logo"><img src="images/logo.svg" alt="" /></span>
-      <h1>Stellar</h1>
-      <p>Just another free, fully responsive site template<br />
-      built by <a href="https://twitter.com/ajlkn">@ajlkn</a> for <a href="https://html5up.net">HTML5 UP</a>.</p>
+      <span class="logo"><img src="images/seedling-solid.svg" alt="" /></span>
+      <h1>b u l b</h1>
+      <p>the home gardener's best pal</p>
     </header>
     <router-view/>
 
@@ -26,7 +25,7 @@
         </ul>
       </section>
       <section>
-        <h2>Etiam feugiat</h2>
+        <!-- <h2>Etiam feugiat</h2>
         <dl class="alt">
           <dt>Address</dt>
           <dd>1234 Somewhere Road &bull; Nashville, TN 00000 &bull; USA</dd>
@@ -34,7 +33,7 @@
           <dd>(000) 000-0000 x 0000</dd>
           <dt>Email</dt>
           <dd><a href="#">information@untitled.tld</a></dd>
-        </dl>
+        </dl> -->
         <ul class="icons">
           <li><a href="#" class="icon brands fa-twitter alt"><span class="label">Twitter</span></a></li>
           <li><a href="#" class="icon brands fa-facebook-f alt"><span class="label">Facebook</span></a></li>

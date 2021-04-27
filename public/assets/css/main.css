@@ -22,7 +22,7 @@ section, summary, time, mark, audio, video {
 	padding: 0;
 	border: 0;
 	font-size: 100%;
-	font: inherit;
+	font-family: 'Indie Flower', cursive;
 	vertical-align: baseline;}
 
 article, aside, details, figcaption, figure,
@@ -98,12 +98,20 @@ input, select, textarea {
 		box-sizing: inherit;
 	}
 
-	body {
+	/* body {
 		background-color: #935d8c;
 		background-image: url("images/overlay.png"), -moz-linear-gradient(45deg, #e37682 15%, #5f4d93 85%);
 		background-image: url("images/overlay.png"), -webkit-linear-gradient(45deg, #e37682 15%, #5f4d93 85%);
 		background-image: url("images/overlay.png"), -ms-linear-gradient(45deg, #e37682 15%, #5f4d93 85%);
 		background-image: url("images/overlay.png"), linear-gradient(45deg, #e37682 15%, #5f4d93 85%);
+	} */
+
+	body {
+		background-color: #b1fff3;
+		background-image: url("images/overlay.png"), -moz-linear-gradient(45deg, #eec6eb 15%, #cbf9f2 85%);
+		background-image: url("images/overlay.png"), -webkit-linear-gradient(45deg, #eec6eb 15%, #cbf9f2 85%);
+		background-image: url("images/overlay.png"), -ms-linear-gradient(45deg, #eec6eb 15%, #cbf9f2 85%);
+		background-image: url("images/overlay.png"), linear-gradient(45deg, #eec6eb 15%, #cbf9f2 85%);
 	}
 
 		body.is-preload *, body.is-preload *:before, body.is-preload *:after {
@@ -3083,6 +3091,7 @@ input, select, textarea {
 		#header p {
 			font-size: 1.25em;
 			letter-spacing: -0.025em;
+			color: black
 		}
 
 		#header.alt {
@@ -3091,6 +3100,7 @@ input, select, textarea {
 
 			#header.alt h1 {
 				font-size: 3.25em;
+				color: black
 			}
 
 			#header.alt > * {
