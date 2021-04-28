@@ -49,30 +49,6 @@
 
 					</div>
        </div>
-
-  
-    <br>
-
-    <hr width="20%">
-
-
-    
- 
-    
-
-
-
-
-    <br>
-    <br>
-    <hr>
-    <br>
-    <div v-for="plant in filterBy(filterBy(filterBy(filterBy(filterBy(plants, selectedDrought, 'drought_tolerance'), selectedShade, 'shade_tolerance'), selectedMoisture, 'moisture_needs'), selectedDuration, 'duration'), selectedFlowering, 'flower_conspicuous')">
-      {{ plant.id }}. {{ plant.common_name }}
-      <p><small><router-link v-bind:to="`/plants/${plant.id}`">More Details</router-link></small></p>
-      <hr width="40%">
-      <br><br>
-    </div>
   </div>
 </template>
 

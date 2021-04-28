@@ -5,7 +5,6 @@
     <div v-for="garden in gardens">
       <h4>{{ garden.plant }}</h4>
       <router-link v-bind:to="`/plants/${garden.plant_id}`" >Plant Info</router-link> | <button v-on:click="showGarden(garden)">Update</button>
-      <!-- <router-link v-bind:to="`/mygarden/${garden.id}/edit`">Update</router-link> -->
       <hr width="20%">
     </div>
     <dialog id="garden-details">
