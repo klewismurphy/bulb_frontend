@@ -1,13 +1,44 @@
 <template>
   <div class="PlantsIndex">
-    <h1>{{ message }}</h1>
-    <br>
-    <div v-for="plant in plants">
-      {{ plant.id }}. {{ plant.common_name}}
-      <p><small><router-link v-bind:to="`/plants/${plant.id}`">More Details</router-link></small></p>
-      <hr width="40%">
-      <br><br>
-    </div>
+    <div id="wrapper">
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Content -->
+							<section id="content" class="main">
+
+								<!-- Text -->
+									<section>
+                    <!-- <align-right><router-link to="/"><img src="images/home-solid.svg" alt="" />    </router-link> <router-link to="/search"><img src="images/search-solid.svg" alt="" /></router-link>
+                    </align-right> -->
+										<h2>Browse All Plants</h2>
+                    <hr width="20%">
+									</section>
+									<section>
+										<div class="table-wrapper">
+											<table>
+												<thead>
+													<tr>
+														<th>Common Name</th>
+														<th>Scientific Name</th>
+														<th>More Info</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr v-for="plant in plants">
+														<td>{{ plant.common_name }}</td>
+														<td>{{ plant.scientific_name }}</td>
+														<td><router-link v-bind:to="`/plants/${plant.id}`"><img src="images/pagelines-brands.svg" alt="" /></router-link></td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+									</section>
+							</section>
+
+					</div>
+       </div>
   </div>
 </template>
 

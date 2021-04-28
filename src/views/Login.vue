@@ -1,22 +1,36 @@
 <template>
   <div class="login">
-    <form v-on:submit.prevent="submit()">
-      <h1>Login</h1>
-      <ul>
-        <li class="text-danger" v-for="error in errors" v-bind:key="error">
-          {{ error }}
-        </li>
-      </ul>
-      <div class="form-group">
-        <label>Email:</label>
-        <input type="email" class="form-control" v-model="email">
+    <div id="wrapper">
+      <div id="main">
+        <section id="content" class="main">
+          <section>
+            <h2>Login</h2>
+            <form v-on:submit.prevent="submit()">
+              <ul>
+                <li class="text-danger" v-for="error in errors" v-bind:key="error">
+                  {{ error }}
+                </li>
+              </ul>
+                <div class="col-6 col-12-xsmall">
+                  <input type="email" class="form-control" v-model="email" placeholder="Email" />
+                </div>
+                <br>
+                  <div class="col-6 col-12-xsmall">
+                  <input type="password" class="form-control" v-model="password" placeholder="Password" />
+                </div>
+                <br>
+                <div class="col-12">
+                  <ul class="actions">
+                    <li><input type="submit" value="Submit" class="primary" /></li>
+                    <li><input type="reset" value="Reset" /></li>
+                  </ul>
+                </div>
+            </form>
+          </section>
+        </section>
+
       </div>
-      <div class="form-group">
-        <label>Password:</label>
-        <input type="password" class="form-control" v-model="password">
-      </div>
-      <input type="submit" class="btn btn-primary" value="Submit">
-    </form>
+		</div>
   </div>
 </template>
 
