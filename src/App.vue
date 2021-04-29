@@ -1,5 +1,11 @@
 <template>
   <div id="app">
+    <div> 
+					<nav id="top">
+            <router-link to="/"><img src="images/home-solid.svg" alt="" />    </router-link> <router-link to="/search">    . .   <img src="images/search-solid.svg" alt="" /></router-link>   . . <router-link to="/search"><img src="images/user-solid.svg" alt="" /></router-link>
+          <!-- <a href="#" class="button primary">Sign Up</a> -->
+					</nav>
+</div>
     <!-- <div id="nav">
       <router-link to="/">Home | </router-link>
       <router-link to="/signup" v-if="!isLoggedIn()">Signup | </router-link>
@@ -50,6 +56,18 @@
 </template>
 
 <style>
+#top {
+  background-color: White;
+  height: 60px;
+  width: 60%;
+  margin: auto;
+  padding: 0.5em;
+  text-align: center;
+  border-bottom: 1px solid #eec6eb;
+  border-left: 1px solid #eec6eb;
+  border-right: 1px solid #eec6eb;
+  border-radius: 20px;
+}
 </style>
 
 <script>

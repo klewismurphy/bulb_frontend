@@ -8,8 +8,8 @@
     <h4> {{ plant.scientific_name }} </h4>
     <button v-on:click="showPlant(plant)" v-if="isLoggedIn()">Add to my Garden</button>
     <hr class="style-four">
-    <div class="row" style="text-align:center;">
-		<div class="col-6 col-12-medium">											
+    <div class="row">
+		<div class="col-6 col-12">											
       <h3> Growth Needs </h3>
       <li><b>Shade Tolerance:</b> {{ plant.shade_tolerance }} </li>
       <li>Drought Tolerance: {{ plant.drought_tolerance }} </li>
