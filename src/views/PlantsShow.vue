@@ -40,17 +40,20 @@
     </div>
     <hr width="70%">
     <router-link to="/plants">Browse All</router-link> | <router-link to="/search">Search</router-link>
-
-    <dialog id="plant-details">
+    
+    <dialog class="modal" id="plant-details">
       <form>
-        <h2>{{ plant.common_name }}</h2>
+        <br>
+        <h1>{{ plant.common_name }}</h1>
         <v-select :options="['want to plant', 'planted']" v-model="gardenStatus"/>
         <br>
-        <button v-on:click="createGarden()">Add to Garden</button> 
-        <br><br>
-        <button>Close</button>
+        <a href="/mygarden" class="button large" v-on:click="createGarden()">Add to Garden</a> 
+        <br class="mini">
+        <br class="mini">
+        <button class="button small">X</button>
       </form>
     </dialog>
+ 
     
      </section>
 		</div>
@@ -69,6 +72,23 @@ hr.style-three {
   border-bottom: 1px dashed #ccc;
   background: #999;
   align-items: center;
+}
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  right: 50%;
+  transform: translate(-50%, -50%);
+  color: #eec6eb;
+  max-width: 100%;
+  width: 600px;
+  max-height: 100%;
+  border-radius: 9em;
+  align-items: center;
+}
+br.mini {
+  display: block;
+  margin: 10px 0;
 }
 </style>
 
