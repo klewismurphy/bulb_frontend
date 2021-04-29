@@ -1,17 +1,21 @@
 <template>
   <div class="gardenindex">
-    <h1>{{ message }}</h1>
-    <br>
-    <div v-for="garden in gardens">
-      <h4>{{ garden.plant }}</h4>
-      <router-link v-bind:to="`/plants/${garden.plant_id}`" >Plant Info</router-link> | <button v-on:click="showGarden(garden)">Update</button>
-      <hr width="20%">
+    <div id="wrapper">
+      <div id="main">
+        <section id="content" class="main">
+          <h1 style="text-align:center">{{ message }}</h1>
+          <div class="index" v-for="garden in gardens">
+            <h2>{{ garden.plant }}</h2>
+      <router-link v-bind:to="`/plants/${garden.plant_id}`" class="button large">Plant Info</router-link> |
+      <a href="/mygarden" class="button large" v-on:click="showGarden(garden)">Update</a>
+      <br>
+      <br>
     </div>
+     
     <dialog id="garden-details">
       <form>
         <h2>{{currentGarden.plant}}</h2>
         <h3>Current Status: {{currentGarden.status}}</h3>
-        <!-- <p> Update Status: </p> -->
         <v-select :options="['want to plant', 'planted']" v-model="currentGarden.status"/>
         <br>
         <button v-on:click="updateGarden(currentGarden)">Update Status</button> | <button v-on:click="deletePlant(currentGarden)">Remove Plant</button>
@@ -19,10 +23,23 @@
         <button>Close</button>
       </form>
     </dialog>
+        </section>
+      </div>
+    </div>
+    
   </div>
 </template>
 
 <style>
+div.index {
+  text-align: center;
+  border-style: solid;
+  border-color: #00ff00;
+  border-radius: 55px;
+  border-width: 1px;
+  padding: 0.5em;
+  width: auto;
+}
 </style>
 
 <script>

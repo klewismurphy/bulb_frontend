@@ -2,17 +2,23 @@
   <div id="app">
     <div> 
 					<nav id="top">
-            <router-link to="/"><img src="images/home-solid.svg" alt="" />    </router-link> <router-link to="/search">    . .   <img src="images/search-solid.svg" alt="" /></router-link>   . . <router-link to="/search"><img src="images/user-solid.svg" alt="" /></router-link>
-          <!-- <a href="#" class="button primary">Sign Up</a> -->
+            <router-link to="/"><img src="images/home-solid.svg" alt="" /> ..... </router-link> 
+            <router-link to="/search"><img src="images/search-solid.svg" alt="" /> ..... </router-link>
+            <router-link to="/login" v-if="!isLoggedIn()"><img src="images/sign-in-alt-solid.svg" alt="" /> ..... </router-link>
+            <router-link to="/logout" v-if="isLoggedIn()"><img src="images/sign-out-alt-solid.svg" alt="" /> ..... </router-link>
+            <router-link to="/mygarden" v-if="isLoggedIn()"><img src="images/user-solid.svg" alt="" /> ..... </router-link>
 					</nav>
 </div>
-    <!-- <div id="nav">
+    <!-- <div id="nav>
       <router-link to="/">Home | </router-link>
       <router-link to="/signup" v-if="!isLoggedIn()">Signup | </router-link>
       <router-link to="/login" v-if="!isLoggedIn()">Login | </router-link> 
       <router-link to="/logout" v-if="isLoggedIn()">Logout | </router-link>
       <router-link to="/mygarden" v-if="isLoggedIn()">My Garden</router-link>
     </div> -->
+
+
+
         <!-- Header -->
     <header id="header" class="alt">
       <span class="logo"><img src="images/bulb.svg" alt="" /></span>
