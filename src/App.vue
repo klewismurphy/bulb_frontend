@@ -25,7 +25,7 @@
     <header id="header" class="alt">
       <span class="logo"><img src="images/bulb.svg" alt="" /></span>
       <h1>b u l b</h1>
-      <p>the home gardener's best pal</p>
+      <p>snappy catchphrase probably something around IDEAS like a lightbulb </p>
     </header>
     <router-view/>
 
