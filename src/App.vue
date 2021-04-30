@@ -2,11 +2,13 @@
   <div id="app">
     <div> 
 					<nav id="top">
-            <router-link to="/"><img src="images/home-solid.svg" alt="" /> ..... </router-link> 
-            <router-link to="/search"><img src="images/search-solid.svg" alt="" /> ..... </router-link>
-            <router-link to="/login" v-if="!isLoggedIn()"><img src="images/sign-in-alt-solid.svg" alt="" /> ..... </router-link>
-            <router-link to="/logout" v-if="isLoggedIn()"><img src="images/sign-out-alt-solid.svg" alt="" /> ..... </router-link>
-            <router-link to="/mygarden" v-if="isLoggedIn()"><img src="images/user-solid.svg" alt="" /> ..... </router-link>
+            <div class="tooltip">
+            <router-link to="/"><img src="images/home-solid.svg" alt="" /><span class="tooltiptext">home</span> ..... </span></router-link>
+            <router-link to="/search"><img src="images/search-solid.svg" alt="" /><span class="tooltiptext">search</span> ..... </span></router-link>
+            <router-link to="/login" v-if="!isLoggedIn()"><img src="images/sign-in-alt-solid.svg" alt="" /><span class="tooltiptext">login</span> ..... </span></router-link>
+            <router-link to="/logout" v-if="isLoggedIn()"><img src="images/sign-out-alt-solid.svg" alt="" /><span class="tooltiptext">logout</span> ..... </span></router-link>
+            <router-link to="/mygarden" v-if="isLoggedIn()"><img src="images/user-solid.svg" alt="" /><span class="tooltiptext">my garden</span> ..... </span></router-link>
+            </div>
 					</nav>
 </div>
     <!-- <div id="nav>
@@ -73,6 +75,38 @@
   border-left: 1px solid #eec6eb;
   border-right: 1px solid #eec6eb;
   border-radius: 20px;
+}
+.tooltip {
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+}
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+  position: absolute;
+  z-index: 1;
+  width: 80px;
+  top: 100%;
+  margin-left: -60px;
+}
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+.tooltip .tooltiptext::after {
+  content: " ";
+  position: absolute;
+  bottom: 100%; /* At the top of the tooltip */
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent black transparent;
 }
 </style>
 

@@ -73,24 +73,24 @@
         </header>
         <ul class="statistics">
           <li class="style1">
-            <span class="icon fa-pagelines"></span>
-            <strong>5,120</strong> Etiam
+            <img src="images/pagelines-brands.svg"></span>
+            <strong><br>cool PLANT</strong>
           </li>
           <li class="style2">
-            <span class="icon fa-folder-open"></span>
-            <strong>8,192</strong> Magna
+            <img src="images/pagelines-brands.svg"></span>
+            <strong><br>cooler plant</strong>
           </li>
           <li class="style3">
-            <span class="icon solid fa-signal"></span>
-            <strong>2,048</strong> Tempus
+            <img src="images/pagelines-brands.svg"></span>
+            <strong><br>even cooler plant</strong>
           </li>
           <li class="style4">
-            <span class="icon solid fa-laptop"></span>
-            <strong>4,096</strong> Aliquam
+            <img src="images/pagelines-brands.svg"></span>
+            <strong><br>amazin plant</strong>
           </li>
           <li class="style5">
-            <span class="icon fa-gem"></span>
-            <strong>1,024</strong> Nullam
+            <img src="images/pagelines-brands.svg"></span>
+            <strong><br>okay plant</strong>
           </li>
         </ul>
         <p class="content"></p>

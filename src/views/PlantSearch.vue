@@ -27,6 +27,11 @@
                   <hr>
 									<section>
 										<div class="table-wrapper">
+                      	<paginate 
+														name="plants"
+														:list="plants"
+														:per="50"
+														>
 											<table>
 												<thead>
 													<tr>
@@ -36,13 +41,15 @@
 													</tr>
 												</thead>
 												<tbody>
-													<tr v-for="plant in filterBy(filterBy(filterBy(filterBy(filterBy(plants, selectedDrought, 'drought_tolerance'), selectedShade, 'shade_tolerance'), selectedMoisture, 'moisture_needs'), selectedDuration, 'duration'), selectedFlowering, 'flower_conspicuous')">
+													<tr v-for="plant in filterBy(filterBy(filterBy(filterBy(filterBy(paginated('plants'), selectedDrought, 'drought_tolerance'), selectedShade, 'shade_tolerance'), selectedMoisture, 'moisture_needs'), selectedDuration, 'duration'), selectedFlowering, 'flower_conspicuous')">
 														<td>{{ plant.common_name }}</td>
 														<td>{{ plant.scientific_name }}</td>
 														<td><router-link v-bind:to="`/plants/${plant.id}`"><img src="images/pagelines-brands.svg" alt="" /></router-link></td>
 													</tr>
 												</tbody>
 											</table>
+                      </paginate>
+											<paginate-links for="plants" :simple="{prev: '<< Back', next: 'Next >>'}"></paginate-links>
 										</div>
 									</section>
 							</section>
@@ -53,6 +60,12 @@
 </template>
 
 <style>
+.paginate-links.plants {
+  text-align: center;
+  list-style-type: none;
+  font-size: 1.5em;
+  cursor: pointer;
+}
 </style>
 
 <script>
@@ -66,6 +79,7 @@ export default {
     return {
       message: "What Should I Plant Here?",
       plants: [],
+      paginate: ["plants"],
       selectedDrought: "",
       selectedShade: "",
       selectedMoisture: "",
