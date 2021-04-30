@@ -2,25 +2,26 @@
   <div class="gardenindex">
     <div id="wrapper">
       <div id="main">
-        <section id="content" class="main">
+        <section id="content" class="main" style="text-align:center;">
           <h1 style="text-align:center">{{ message }}</h1>
           <div class="index" v-for="garden in gardens">
             <h2>{{ garden.plant }}</h2>
       <router-link v-bind:to="`/plants/${garden.plant_id}`" class="button large">Plant Info</router-link> |
-      <a href="/mygarden" class="button large" v-on:click="showGarden(garden)">Update</a>
+      <button class="button large" v-on:click="showGarden(garden)">Update</button>
       <br>
       <br>
     </div>
      
-    <dialog id="garden-details">
+    <dialog class="modal" id="garden-details">
       <form>
-        <h2>{{currentGarden.plant}}</h2>
+        <h1>{{currentGarden.plant}}</h1>
         <h3>Current Status: {{currentGarden.status}}</h3>
         <v-select :options="['want to plant', 'planted']" v-model="currentGarden.status"/>
         <br>
-        <button v-on:click="updateGarden(currentGarden)">Update Status</button> | <button v-on:click="deletePlant(currentGarden)">Remove Plant</button>
-        <br><br>
-        <button>Close</button>
+        <button class="button large" v-on:click="updateGarden(currentGarden)">Update Status</button> | <button class="button large" v-on:click="deletePlant(currentGarden)">Remove Plant</button>
+         <br class="mini">
+        <br class="mini">
+        <button class="button small">X</button>
       </form>
     </dialog>
         </section>
@@ -39,6 +40,23 @@ div.index {
   border-width: 1px;
   padding: 0.5em;
   width: auto;
+}
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  right: 50%;
+  transform: translate(-50%, -50%);
+  color: #eec6eb;
+  max-width: 100%;
+  width: 600px;
+  max-height: 100%;
+  border-radius: 9em;
+  align-items: center;
+}
+br.mini {
+  display: block;
+  margin: 10px 0;
 }
 </style>
 

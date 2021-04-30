@@ -1861,6 +1861,7 @@ input, select, textarea {
 		text-align: center;
 		text-decoration: none;
 		white-space: nowrap;
+		font-family: 'Indie Flower', cursive;
 	}
 
 		input[type="submit"].icon,
