@@ -35,64 +35,33 @@
           <span class="image"><img src="images/pic01.jpg" alt="" /></span>
         </div>
       </section>
-
-    <!-- First Section
-      <section id="first" class="main special">
-        <header class="major">
-          <h2>Magna veroeros</h2>
-        </header>
-        <ul class="features">
-          <li>
-            <span class="icon solid major style1 fa-code"></span>
-            <h3>Ipsum consequat</h3>
-            <p>Sed lorem amet ipsum dolor et amet nullam consequat a feugiat consequat tempus veroeros sed consequat.</p>
-          </li>
-          <li>
-            <span class="icon major style3 fa-copy"></span>
-            <h3>Amed sed feugiat</h3>
-            <p>Sed lorem amet ipsum dolor et amet nullam consequat a feugiat consequat tempus veroeros sed consequat.</p>
-          </li>
-          <li>
-            <span class="icon major style5 fa-gem"></span>
-            <h3>Dolor nullam</h3>
-            <p>Sed lorem amet ipsum dolor et amet nullam consequat a feugiat consequat tempus veroeros sed consequat.</p>
-          </li>
-        </ul>
-        <footer class="major">
-          <ul class="actions special">
-            <li><a href="generic.html" class="button">Learn More</a></li>
-          </ul>
-        </footer>
-      </section> -->
-
-    <!-- Second Section -->
       <section id="second" class="main special">
         <header class="major">
-          <h2>featured plants</h2>
-          <p>Figure out how to get a random selection of plants here</p>
+          <h2>today's featured plants</h2>
         </header>
         <ul class="statistics">
           <li class="style1">
             <img src="images/pagelines-brands.svg"></span>
-            <strong><br>cool PLANT</strong>
+            <strong><br> {{ plants[Math.floor(Math.random() * plants.length)].common_name }} </strong>
           </li>
           <li class="style2">
             <img src="images/pagelines-brands.svg"></span>
-            <strong><br>cooler plant</strong>
+            <strong><br>{{ plants[Math.floor(Math.random() * plants.length)].common_name }}</strong>
           </li>
           <li class="style3">
             <img src="images/pagelines-brands.svg"></span>
-            <strong><br>even cooler plant</strong>
+            <strong><br>{{ plants[Math.floor(Math.random() * plants.length)].common_name }}</strong>
           </li>
           <li class="style4">
             <img src="images/pagelines-brands.svg"></span>
-            <strong><br>amazin plant</strong>
+            <strong><br>{{ plants[Math.floor(Math.random() * plants.length)].common_name }}</strong>
           </li>
           <li class="style5">
             <img src="images/pagelines-brands.svg"></span>
-            <strong><br>okay plant</strong>
+            <strong><br>{{ plants[Math.floor(Math.random() * plants.length)].common_name }}</strong>
           </li>
         </ul>
+        
         <p class="content"></p>
         <footer class="major">
           <ul class="actions special">
@@ -129,9 +98,23 @@ export default {
   data: function () {
     return {
       message: "bulb",
+      plants: [],
+      feat_plant1: {},
+      paginate: ["plants"],
     };
   },
-  created: function () {},
-  methods: {},
+  created: function () {
+    this.plantsIndex();
+  },
+  methods: {
+    plantsIndex: function () {
+      console.log("getting plants...");
+      axios.get("/api/plants").then((response) => {
+        console.log(response.data);
+        this.plants = response.data;
+        // this.feat_plant1 = plants[Math.floor(Math.random() * plants.length)];
+      });
+    },
+  },
 };
 </script>
