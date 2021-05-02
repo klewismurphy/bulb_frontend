@@ -9,6 +9,7 @@ import Signup from '../views/Signup.vue'
 import Login from '../views/Login.vue'
 import Logout from '../views/Logout.vue'
 import PlantSearch from '../views/PlantSearch.vue'
+import PlantSearchState from '../views/PlantSearchState.vue'
 import GardenIndex from '../views/GardenIndex.vue'
 import Glossary from '../views/Glossary.vue'
 
@@ -51,6 +52,11 @@ const routes = [
     path: '/search',
     name: 'search',
     component: PlantSearch
+  },
+  {
+    path: '/search/state',
+    name: 'PlantSearchState',
+    component: PlantSearchState
   },
   {
     path: '/mygarden',

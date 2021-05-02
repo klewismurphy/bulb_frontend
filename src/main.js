@@ -18,10 +18,10 @@ Vue.config.productionTip = false
 
 new Vue({
   router,
-  render: h => h(App),
-  watch: {
-    '$route': function () {
-      window.location.reload();
-    }
-  }
+  render: h => h(App)
+  // watch: {
+  //   '$route': function () {
+  //     window.location.reload();
+  //   }
+  // }
 }).$mount('#app')

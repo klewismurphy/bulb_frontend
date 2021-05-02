@@ -9,33 +9,36 @@
     <button v-on:click="showPlant(plant)" v-if="isLoggedIn()">Add to my Garden</button>
     <hr class="style-four">
     <div class="row">
-		<div class="col-6 col-12">											
+		<div class="col-6 col-12">										
+      <ul class="showlist">
+      <h3> Locale </h3>
+      <li><b>Found in:</b> {{plant.state}} </li>
+      <hr width="70%">
       <h3> Growth Needs </h3>
       <li><b>Shade Tolerance:</b> {{ plant.shade_tolerance }} </li>
-      <li>Drought Tolerance: {{ plant.drought_tolerance }} </li>
-      <li>Moisture Needs: {{ plant.moisture_needs }} </li>
-      <li>Maximum Tolerable Precipitation (inches): {{ plant.max_precip }} </li>
+      <li><b>Drought Tolerance:</b> {{ plant.drought_tolerance }} </li>
+      <li><b>Moisture Needs:</b> {{ plant.moisture_needs }} </li>
+      <li><b>Maximum Tolerable Precipitation (inches):</b> {{ plant.max_precip }} </li>
 
       <hr width="70%">
       <h3> Soil Needs </h3>
-      <li>Root Depth (inches): {{ plant.root_depth }} </li>
-      <li>Adapted to Course Soil: {{ plant.coarse_soil }} </li>
-      <li>Adapted to Medium Soil: {{ plant.medium_soil }} </li>
-      <li>Adapted to Fine Soil: {{ plant.fine_soil }} </li>
-      <li>Salinity Tolerance: {{ plant.salinity_tolerance }} </li>
+      <li><b>Root Depth (inches):</b> {{ plant.root_depth }} </li>
+      <li><b>Adapted to Course Soil:</b> {{ plant.coarse_soil }} </li>
+      <li><b>Adapted to Medium Soil:</b> {{ plant.medium_soil }} </li>
+      <li><b>Adapted to Fine Soil:</b> {{ plant.fine_soil }} </li>
     <hr width="70%">
     <h3> Timing </h3>
-    <li>Growth Period: {{ plant.growth_period }} </li>
-    <li>Blooming Period: {{ plant.bloom_period }} </li>
-    <li>Duration: {{ plant.duration }} </li>
-    <li>Height at Maturity (ft): {{ plant.mature_height }} </li>
-    <li>Lifespan: {{ plant.lifespan }} </li>
+    <li><b>Growth Period:</b> {{ plant.growth_period }} </li>
+    <li><b>Blooming Period:</b> {{ plant.bloom_period }} </li>
+    <li><b>Duration:</b> {{ plant.duration }} </li>
+    <li><b>Height at Maturity (ft):</b> {{ plant.mature_height }} </li>
     <hr width="70%">
     <h3> Langiappe </h3>
-    <li>Flower? {{ plant.flower_conspicuous }} </li>
-    <li>Flower Color: {{ plant.flower_color }} </li>
-    <li>Fruit? {{ plant.fruit_conspicuous }} </li>
-    <li>Toxicity? {{ plant.toxicity }} </li>
+    <li><b>Flower?</b> {{ plant.flower_conspicuous }} </li>
+    <li><b>Flower Color:</b> {{ plant.flower_color }} </li>
+    <li><b>Fruit?</b> {{ plant.fruit_conspicuous }} </li>
+    <li><b>Toxicity? </b>{{ plant.toxicity }} </li>
+    </ul>
     </div>
     </div>
     <hr width="70%">
@@ -89,6 +92,9 @@ hr.style-three {
 br.mini {
   display: block;
   margin: 10px 0;
+}
+.showlist {
+  list-style-type: none;
 }
 </style>
 

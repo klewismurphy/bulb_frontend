@@ -1,12 +1,12 @@
 <template>
-  <div class="PlantSearch">
+  <div class="PlantSearchState">
     <div id="wrapper">
 
 				<!-- Main -->
 					<div id="main">
 
 						<!-- Content -->
-							<section id="content" class="main">
+							<section id="content" class="main" style="text-align:center;">
 
 								<!-- Text -->
 									<section>
@@ -14,17 +14,9 @@
                     </align-right> -->
 										<h1>{{message}}</h1>
                     <blockquote> Here at Bulb, we know that there's a green thumb in every gardener, a garden for every sprout. <br> If you're looking for help in choosing the perfect plant, you've come to the right place.</blockquote>
-                    <h3>Search by State</h3>
-                    <h3>Search by Characteristics</h3>
-                    <v-select placeholder="-Drought Tolerance-" :options="['Low', 'Medium', 'High']" v-model="selectedDrought"/>
-                    <br>
-                    <v-select placeholder="-Shade Tolerance-" :options="['Tolerant', 'Intermediate', 'Intolerant']" v-model="selectedShade"/>
-                    <br>
-                    <v-select placeholder="-Moisture Needs-" :options="['Low', 'Medium', 'High']" v-model="selectedMoisture"/>
-                    <br>
-                    <v-select placeholder="-Duration-" :options="['Perennial', 'Annual', 'Biennial', 'Climate Dependent']" v-model="selectedDuration"/>
-                    <br>
-                    <v-select placeholder="-Flowering-" :options="['Yes', 'No']" v-model="selectedFlowering"/>
+                    <v-select placeholder="-State-" :options="['AL','AK', 'AZ', 'AR', 'CA', 'CO', 'CT', 'DE', 'FL', 'GA', 'HI', 'ID', 'IL', 'IN', 'IA', 'KS', 'KY', 'LA', 'ME', 'MD', 'MA', 'MI', 'MN', 'MS', 'MO', 'MT', 'NE', 'NV', 'NH', 'NJ', 'NM', 'NY', 'NC', 'ND', 'OH', 'OK', 'OR', 'PA', 'RI', 'SC', 'SD', 'TN', 'TX', 'UT', 'VT', 'VA', 'WA', 'WV', 'WI', 'WY']" v-model="selectedState"/><br>
+                    <button class="button large" v-on:click="statesIndex(selectedState)">Search</button>
+                    <router-link to="/search" class="button large">Return to Search by Characteristics</router-link>
 									</section>
                   <hr>
 									<section>
@@ -43,7 +35,7 @@
 													</tr>
 												</thead>
 												<tbody>
-													<tr v-for="plant in filterBy(filterBy(filterBy(filterBy(filterBy(paginated('plants'), selectedDrought, 'drought_tolerance'), selectedShade, 'shade_tolerance'), selectedMoisture, 'moisture_needs'), selectedDuration, 'duration'), selectedFlowering, 'flower_conspicuous')">
+													<tr v-for="plant in (paginated('plants'))">
 														<td>{{ plant.common_name }}</td>
 														<td>{{ plant.scientific_name }}</td>
 														<td><router-link v-bind:to="`/plants/${plant.id}`"><img src="images/pagelines-brands.svg" alt="" /></router-link></td>
@@ -82,20 +74,14 @@ export default {
       message: "What Should I Plant Here?",
       plants: [],
       paginate: ["plants"],
-      selectedDrought: "",
-      selectedShade: "",
-      selectedMoisture: "",
-      selectedDuration: "",
-      selectedFlowering: "",
+      selectedState: "",
     };
   },
-  created: function () {
-    this.plantsIndex();
-  },
+  created: function () {},
   methods: {
-    plantsIndex: function () {
+    statesIndex: function (selectedState) {
       console.log("getting plants...");
-      axios.get("/api/plants").then((response) => {
+      axios.get(`/api/states/${selectedState}`).then((response) => {
         console.log(response.data);
         this.plants = response.data;
       });

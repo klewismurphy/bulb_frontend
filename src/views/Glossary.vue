@@ -36,6 +36,54 @@
 											</table>
 										</div>
                     <a href="/search" class="button primary">Start Your Search</a>
+                    <br><br>
+                    <h2 class="title"> Plant Characteristics</h2>
+                    	<div class="table-wrapper">
+											<table class="alt">
+												<tbody>
+													<tr>
+														<h3><td>Maximum Tolerable Precipitation</td></h3>
+														<td>This is how much the rain (in inches) the plant can tolerate and still be healthy. Keep this in mind with your local weather.<br><br></td>
+													</tr>
+													<tr>
+														<h3><td>Root Depth</td></h3>
+														<td>This will affect where the plant can be planted.<br><br></td>
+													</tr>
+													<tr>
+														<h3><td>Adapted to Course, Medium, or Fine Soil</td></h3>
+														<td> Do you know your soil makeup? Lots of places may have more clay (fine), or more sand (coarse), or more silt (medium). How do you find out? Check out if your local agriculture school will do a soil test for you. <br> <a href="https://cpb-us-e1.wpmucdn.com/blogs.cornell.edu/dist/f/5772/files/2016/12/04_CASH_SH_Series_Texture_Fact_Sheet_072717-286kw9f.pdf"> Further Reading</a> <br><br></td>
+													</tr>
+													<tr>
+														<h3><td>Growth Period</td></h3>
+														<td>This is the period of the year that you will see the most growth from your plant.<br><br></td>
+                          </tr>
+                          <tr>
+                            <h3><td>Blooming Period</td></h3>
+														<td>Seperate from the growth period - if your plant flowers or fruits, this is when you will see those effects.<br><br></td>
+                          </tr>
+                          <tr>
+                            <h3><td>Height at Maturity</td></h3>
+														<td>How tall your plant will be (in feet) at it's full growth.<br><br></td>
+                          </tr>
+                          <tr>
+                            	<h3><td>Flower?</td></h3>
+														<td>Does this plant flower in its life?<br><br></td>
+													</tr>
+                           <tr>
+                            	<h3><td>Flower Color</td></h3>
+														<td>If the plant does flower, what color is it?<br><br></td>
+													</tr>
+                           <tr>
+                            	<h3><td>Fruit?</td></h3>
+														<td>Does this plant fruit in its life?<br><br></td>
+													</tr>
+                           <tr>
+                            	<h3><td>Toxicity</td></h3>
+														<td>Certain leaves, fruit, or flowers can be toxic to humans and animals. This will give you a heads up if the one you are looking into could be harmful if ingested.<br><br></td>
+													</tr>
+												</tbody>
+											</table>
+                      </div>
 							</section>
               
               </div>
