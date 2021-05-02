@@ -27,12 +27,14 @@
             <header class="major">
               <h2>growth mindset</h2>
             </header>
-            <p>about stuff, what's up</p>
+            <p>Our mission here is to demystify gardening. We think that plants are for everybody! Depending on the characteristics of the space you have, bulb is here to help you narrow down the wide list of plants into the new green pals that will thrive with whatever you're working with.<br>
+            As with any new hobby, there's a certain learning curve around new lingo. If it's your first visit, check out our definitions before you start searching.</p>
             <ul class="actions">
               <li><a href="/search" class="button">Start Searching</a></li>
+              <li><a href="/glossary" class="button primary">What does it all mean?</a></li>
             </ul>
           </div>
-          <span class="image"><img src="images/pic01.jpg" alt="" /></span>
+          <span class="image"><img src="images/jagoda-kondratiuk-5ZIka0r6QiU-unsplash.jpg" alt="" /></span>
         </div>
       </section>
       <section id="second" class="main special">

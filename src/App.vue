@@ -22,7 +22,7 @@
 
 
         <!-- Header -->
-    <header id="header" class="alt">
+    <header id="header">
       <span class="logo"><img src="images/bulb.svg" alt="" /></span>
       <h1>b u l b</h1>
       <p>snappy catchphrase probably something around IDEAS like a lightbulb </p>
@@ -38,7 +38,7 @@
           <li><a href="generic.html" class="button">Learn More</a></li>
         </ul>
       </section>
-      <section>
+      <!-- <section> -->
         <!-- <h2>Etiam feugiat</h2>
         <dl class="alt">
           <dt>Address</dt>
@@ -48,14 +48,14 @@
           <dt>Email</dt>
           <dd><a href="#">information@untitled.tld</a></dd>
         </dl> -->
-        <ul class="icons">
+        <!-- <ul class="icons">
           <li><a href="#" class="icon brands fa-twitter alt"><span class="label">Twitter</span></a></li>
           <li><a href="#" class="icon brands fa-facebook-f alt"><span class="label">Facebook</span></a></li>
           <li><a href="#" class="icon brands fa-instagram alt"><span class="label">Instagram</span></a></li>
           <li><a href="#" class="icon brands fa-github alt"><span class="label">GitHub</span></a></li>
           <li><a href="#" class="icon brands fa-dribbble alt"><span class="label">Dribbble</span></a></li>
         </ul>
-      </section>
+      </section> -->
       <p class="copyright">&copy; Untitled. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
     </footer>
 
@@ -83,6 +83,8 @@
 }
 .tooltip .tooltiptext {
   visibility: hidden;
+  font-size: 0.7em;
+  font-family: "Indie Flower", cursive;
   width: 120px;
   background-color: black;
   color: #fff;
