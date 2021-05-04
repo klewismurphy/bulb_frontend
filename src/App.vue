@@ -25,19 +25,19 @@
     <header id="header">
       <span class="logo"><img src="images/bulb.svg" alt="" /></span>
       <h1>b u l b</h1>
-      <p>snappy catchphrase probably something around IDEAS like a lightbulb </p>
+      <p>the brightest idea in gardening</p>
     </header>
     <router-view/>
 
 <!-- Footer -->
     <footer id="footer">
-      <section>
+      <!-- <section>
         <h2>Aliquam sed mauris</h2>
         <p>Sed lorem ipsum dolor sit amet et nullam consequat feugiat consequat magna adipiscing tempus etiam dolore veroeros. eget dapibus mauris. Cras aliquet, nisl ut viverra sollicitudin, ligula erat egestas velit, vitae tincidunt odio.</p>
         <ul class="actions">
           <li><a href="generic.html" class="button">Learn More</a></li>
         </ul>
-      </section>
+      </section> -->
       <!-- <section> -->
         <!-- <h2>Etiam feugiat</h2>
         <dl class="alt">

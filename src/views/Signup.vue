@@ -8,6 +8,7 @@
 
           <!-- Content -->
             <section id="content" class="main">
+              	<span class="image main"><img src="/images/14B64292-5472-43B1-B7D4-B3B062402FB9_1_105_c.jpeg" alt="" /></span>
                 <section>
                   <h2>Signup</h2>
                   <form v-on:submit.prevent="submit()">

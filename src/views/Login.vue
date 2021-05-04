@@ -3,8 +3,10 @@
     <div id="wrapper">
       <div id="main">
         <section id="content" class="main">
+          <span class="image main"><img src="/images/0FFDD074-EC1D-421B-B795-E304D54FCB88_1_201_a.jpeg" alt="" /></span>
           <section>
-            <h2>Login</h2>
+             
+            <h1>Login</h1>
             <form v-on:submit.prevent="submit()">
               <ul>
                 <li class="text-danger" v-for="error in errors" v-bind:key="error">

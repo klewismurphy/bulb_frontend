@@ -13,7 +13,11 @@
                     <!-- <align-right><router-link to="/"><img src="images/home-solid.svg" alt="" />    </router-link> <router-link to="/search"><img src="images/search-solid.svg" alt="" /></router-link>
                     </align-right> -->
 										<h1 style="text-align:center;">Browse All Plants</h1>
-                    <hr >
+										<span class="image main"><img src="/images/16BC8D80-F7BF-4D8E-8AEC-7A3E048373B0_1_201_a.jpeg" alt="" height="350" /></span>
+                    <div style="text-align:center;">
+										<a href="/search" class="button primary">Start Your Search</a>
+										</div>
+										<hr >
 									</section>
 									<section>
 										<div class="table-wrapper">

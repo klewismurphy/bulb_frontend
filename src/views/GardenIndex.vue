@@ -3,7 +3,10 @@
     <div id="wrapper">
       <div id="main">
         <section id="content" class="main" style="text-align:center;">
-          <h1 style="text-align:center">{{ message }}</h1>
+          <h1 style="text-align:center">{{ message }}<br></h1>
+          
+          <span class="image main"><img src="/images/BB444913-213F-4514-BF90-A6B268D13510_1_201_a.jpeg" alt="" height="550" /></span>
+          
           <div class="index" v-for="garden in gardens">
             <h2>{{ garden.plant }}</h2>
       <router-link v-bind:to="`/plants/${garden.plant_id}`" class="button large">Plant Info</router-link> |
@@ -11,6 +14,10 @@
       <br>
       <br>
     </div>
+    <div v-if="gardens.length === 0">
+      <h2>Oops! Nothing has been saved to your garden yet.</h2>
+      <a href="/search" class="button primary">Start Searching</a>
+      </div>
      
     <dialog class="modal" id="garden-details">
       <form>
@@ -24,6 +31,8 @@
         <button class="button small">X</button>
       </form>
     </dialog>
+    <br><br>
+    
         </section>
       </div>
     </div>
@@ -49,7 +58,7 @@ div.index {
   transform: translate(-50%, -50%);
   color: #eec6eb;
   max-width: 100%;
-  width: 600px;
+  width: 700px;
   max-height: 100%;
   border-radius: 9em;
   align-items: center;
@@ -66,7 +75,7 @@ import "vue-select/dist/vue-select.css";
 export default {
   data: function () {
     return {
-      message: "My Garden",
+      message: "my garden",
       gardens: {},
       currentGarden: {},
     };
