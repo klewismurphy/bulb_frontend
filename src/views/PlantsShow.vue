@@ -13,7 +13,7 @@
       <ul class="showlist">
       <h3> Locale </h3>
       <li><b>Found in:</b> {{plant.state}} </li>
-      <li><b><a href="/glossary">Nativity Status:</a></b> {{plant.native_status}} </li>
+      <li><b><a href="/whynative">Native Status:</a></b> {{plant.native_status}} </li>
       <hr width="70%">
       <h3> Growth Needs </h3>
       <li><b>Shade Tolerance:</b> {{ plant.shade_tolerance }} </li>

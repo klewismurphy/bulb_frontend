@@ -14,7 +14,8 @@
                     </align-right> -->
 										<h1>{{message}}</h1>
                     <blockquote> Here at Bulb, we know that there's a green thumb in every gardener, a garden for every sprout. <br> If you're looking for help in choosing the perfect plant, you've come to the right place. <br><br>
-                    Not sure what we're asking for?   <a href="/glossary" class="button">Check out the Glossary</a></blockquote>
+                    Not sure what we're asking for?   <a href="/glossary" class="button">Check out the Glossary</a> <br><br>
+                    Want to see what lives near you? <router-link to="/search/state" class="button">Search by State</router-link></blockquote>
                     <h3>Search by Characteristics</h3>
                     <v-select placeholder="-Drought Tolerance-" :options="['Low', 'Medium', 'High']" v-model="selectedDrought"/>
                     <br>

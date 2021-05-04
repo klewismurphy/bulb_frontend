@@ -12,6 +12,7 @@ import PlantSearch from '../views/PlantSearch.vue'
 import PlantSearchState from '../views/PlantSearchState.vue'
 import GardenIndex from '../views/GardenIndex.vue'
 import Glossary from '../views/Glossary.vue'
+import NativePlants from '../views/NativePlants.vue'
 
 Vue.use(VueRouter)
 Vue.use(Vue2Filters)
@@ -67,6 +68,11 @@ const routes = [
     path: '/glossary',
     name: 'Glossary',
     component: Glossary
+  },
+  {
+    path: '/whynative',
+    name: 'NativePlants',
+    component: NativePlants
   },
   // {
   //   path: '/about',
