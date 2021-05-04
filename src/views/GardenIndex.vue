@@ -9,13 +9,15 @@
           
           <div class="index" v-for="garden in gardens">
             <h2>{{ garden.plant }}</h2>
+            <h4>Current Status: {{garden.status}}</h4>
       <router-link v-bind:to="`/plants/${garden.plant_id}`" class="button large">Plant Info</router-link> |
       <button class="button large" v-on:click="showGarden(garden)">Update</button>
       <br>
       <br>
     </div>
     <div v-if="gardens.length === 0">
-      <h2>Oops! Nothing has been saved to your garden yet.</h2>
+      <h1> Welcome! </h1>
+      <h2> Nothing has been saved to your garden yet.</h2>
       <a href="/search" class="button primary">Start Searching</a>
       </div>
      

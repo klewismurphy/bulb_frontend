@@ -5,15 +5,16 @@
         <section id="content" class="main" style="text-align:center;">
 
     <h1>{{ plant.common_name }}</h1>
-    <h4> {{ plant.scientific_name }} </h4>
-    <button v-on:click="showPlant(plant)" v-if="isLoggedIn()">Add to my Garden</button>
+    <h3> {{ plant.scientific_name }} </h3>
+    <br>
+    <button class="button large" v-on:click="showPlant(plant)" v-if="isLoggedIn()">Add to my Garden</button><br><br>
+    <a href="/glossary" class="button">What do these terms mean?</a>
     <hr class="style-four">
     <div class="row">
 		<div class="col-6 col-12">										
       <ul class="showlist">
       <h3> Locale </h3>
-      <li><b>Found in:</b> {{plant.state}} </li>
-      <li><b><a href="/whynative">Native Status:</a></b> {{plant.native_status}} </li>
+      <li><b><a href="/whynative">Found in:</a></b> {{plant.state}}</li>
       <hr width="70%">
       <h3> Growth Needs </h3>
       <li><b>Shade Tolerance:</b> {{ plant.shade_tolerance }} </li>
@@ -36,7 +37,8 @@
     <hr width="70%">
     <h3> Langiappe </h3>
     <li><b>Flower?</b> {{ plant.flower_conspicuous }} </li>
-    <li><b>Flower Color:</b> {{ plant.flower_color }} </li>
+    <div v-if="plant.flower_conspicuous === 'Yes'">
+    <li><b>Flower Color:</b> {{ plant.flower_color }} </li></div>
     <li><b>Fruit?</b> {{ plant.fruit_conspicuous }} </li>
     <li><b>Toxicity? </b>{{ plant.toxicity }} </li>
     </ul>
