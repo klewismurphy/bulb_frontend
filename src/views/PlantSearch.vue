@@ -13,8 +13,8 @@
                     <!-- <align-right><router-link to="/"><img src="images/home-solid.svg" alt="" />    </router-link> <router-link to="/search"><img src="images/search-solid.svg" alt="" /></router-link>
                     </align-right> -->
 										<h1>{{message}}</h1>
-                    <blockquote> Here at Bulb, we know that there's a green thumb in every gardener, a garden for every sprout. <br> If you're looking for help in choosing the perfect plant, you've come to the right place.</blockquote>
-                    <h3>Search by State</h3>
+                    <blockquote> Here at Bulb, we know that there's a green thumb in every gardener, a garden for every sprout. <br> If you're looking for help in choosing the perfect plant, you've come to the right place. <br><br>
+                    Not sure what we're asking for?   <a href="/glossary" class="button">Check out the Glossary</a></blockquote>
                     <h3>Search by Characteristics</h3>
                     <v-select placeholder="-Drought Tolerance-" :options="['Low', 'Medium', 'High']" v-model="selectedDrought"/>
                     <br>
@@ -29,11 +29,11 @@
                   <hr>
 									<section>
 										<div class="table-wrapper">
-                      	<paginate 
+                      	<!-- <paginate 
 														name="plants"
 														:list="plants"
 														:per="50"
-														>
+														> -->
 											<table>
 												<thead>
 													<tr>
@@ -43,15 +43,15 @@
 													</tr>
 												</thead>
 												<tbody>
-													<tr v-for="plant in filterBy(filterBy(filterBy(filterBy(filterBy(paginated('plants'), selectedDrought, 'drought_tolerance'), selectedShade, 'shade_tolerance'), selectedMoisture, 'moisture_needs'), selectedDuration, 'duration'), selectedFlowering, 'flower_conspicuous')">
+													<tr v-for="plant in filterBy(filterBy(filterBy(filterBy(filterBy(plants, selectedDrought, 'drought_tolerance'), selectedShade, 'shade_tolerance'), selectedMoisture, 'moisture_needs'), selectedDuration, 'duration'), selectedFlowering, 'flower_conspicuous')">
 														<td>{{ plant.common_name }}</td>
 														<td>{{ plant.scientific_name }}</td>
 														<td><router-link v-bind:to="`/plants/${plant.id}`"><img src="images/pagelines-brands.svg" alt="" /></router-link></td>
 													</tr>
 												</tbody>
 											</table>
-                      </paginate>
-											<paginate-links for="plants" :simple="{prev: '<< Back', next: 'Next >>'}"></paginate-links>
+                      <!-- </paginate>
+											<paginate-links for="plants" :simple="{prev: '<< Back', next: 'Next >>'}"></paginate-links> -->
 										</div>
 									</section>
 							</section>
