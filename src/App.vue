@@ -23,9 +23,8 @@
 
         <!-- Header -->
     <header id="header">
-      <span class="logo"><img src="images/bulb.svg" alt="" /></span>
-      <h1>b u l b</h1>
-      <p>the brightest idea in gardening</p>
+      <span class="image"><img src="/images/Screen Shot 2021-05-06 at 6.21.43 PM.png" alt="" /></span>
+      <br><br>
     </header>
     <router-view/>
 

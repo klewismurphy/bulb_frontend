@@ -10,6 +10,7 @@
           <div class="index" v-for="garden in gardens">
             <h2>{{ garden.plant }}</h2>
             <h4>Current Status: {{garden.status}}</h4>
+            <h4> Notes: {{garden.notes}}</h4>
       <router-link v-bind:to="`/plants/${garden.plant_id}`" class="button large">Plant Info</router-link> |
       <button class="button large" v-on:click="showGarden(garden)">Update</button>
       <br>
@@ -27,14 +28,17 @@
         <h3>Current Status: {{currentGarden.status}}</h3>
         <v-select :options="['want to plant', 'planted']" v-model="currentGarden.status"/>
         <br>
-        <button class="button large" v-on:click="updateGarden(currentGarden)">Update Status</button> | <button class="button large" v-on:click="deletePlant(currentGarden)">Remove Plant</button>
+       <p> Notes: <input type="text" v-model="currentGarden.notes"></p>
+        <button class="button large" v-on:click="updateGarden(currentGarden)">Update</button> | <button class="button large" v-on:click="deletePlant(currentGarden)">Remove Plant</button>
          <br class="mini">
         <br class="mini">
         <button class="button small">X</button>
       </form>
     </dialog>
     <br><br>
-    
+    <div v-if="gardens.length > 0">
+    <a href="/search" class="button primary"> Back to Search </a></div>
+    <br><br>
         </section>
       </div>
     </div>
@@ -101,6 +105,7 @@ export default {
       var params = {
         plant_id: garden.plant_id,
         status: garden.status,
+        notes: garden.notes,
       };
       axios
         .patch("/api/gardens/" + garden.id, params)

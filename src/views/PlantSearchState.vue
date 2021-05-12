@@ -13,7 +13,10 @@
                     <!-- <align-right><router-link to="/"><img src="images/home-solid.svg" alt="" />    </router-link> <router-link to="/search"><img src="images/search-solid.svg" alt="" /></router-link>
                     </align-right> -->
 										<h1>{{message}}</h1>
-                    <blockquote> Find out what's already in your state! Plants that are already used to the climate of your area tend to be hardier and lower maintenance - not to mention great for the environment and all the critters that share it with us. <br> <br><br><router-link to="/search" class="button">Return to Search by Characteristics</router-link></blockquote>
+                    <blockquote> Find out what's already in your state! Plants that are already used to the climate of your area tend to be hardier and lower maintenance - not to mention great for the environment and all the critters that share it with us. <br> <br> <a href="/whynative" class="button primary">Why Grow Native?</a><br><br><router-link to="/search" class="button">Return to Search by Characteristics</router-link>
+                   
+                    </blockquote>
+                    <hr>
                     <v-select placeholder="-State-" :options="['AL','AK', 'AZ', 'AR', 'CA', 'CO', 'CT', 'DE', 'FL', 'GA', 'HI', 'ID', 'IL', 'IN', 'IA', 'KS', 'KY', 'LA', 'ME', 'MD', 'MA', 'MI', 'MN', 'MS', 'MO', 'MT', 'NE', 'NV', 'NH', 'NJ', 'NM', 'NY', 'NC', 'ND', 'OH', 'OK', 'OR', 'PA', 'RI', 'SC', 'SD', 'TN', 'TX', 'UT', 'VT', 'VA', 'WA', 'WV', 'WI', 'WY']" v-model="selectedState"/><br>
                     <div style="text-align:center;"><button class="button large" v-on:click="statesIndex(selectedState)">Search by State</button>
 										<br><br>
