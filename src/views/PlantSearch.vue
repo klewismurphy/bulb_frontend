@@ -96,7 +96,7 @@ export default {
   methods: {
     plantsIndex: function () {
       console.log("getting plants...");
-      axios.get("/api/plants").then((response) => {
+      axios.get("https://bulbbackend.herokuapp.com/api/plants").then((response) => {
         console.log(response.data);
         this.plants = response.data;
       });

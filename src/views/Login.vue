@@ -54,7 +54,7 @@ export default {
         password: this.password,
       };
       axios
-        .post("/api/sessions", params)
+        .post("https://bulbbackend.herokuapp.com/api/sessions", params)
         .then((response) => {
           axios.defaults.headers.common["Authorization"] = "Bearer " + response.data.jwt;
           localStorage.setItem("jwt", response.data.jwt);

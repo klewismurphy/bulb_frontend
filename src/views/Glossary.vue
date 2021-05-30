@@ -81,6 +81,10 @@
                             	<h3><td>Toxicity</td></h3>
 														<td>Certain leaves, fruit, or flowers can be toxic to humans and animals. This will give you a heads up if the one you are looking into could be harmful if ingested.<br><br></td>
 													</tr>
+													 <tr>
+                            	<h3><td>Langiappe</td></h3>
+														<td>A little something extra.In this case - information that's not vital but nice to know.<br><br></td>
+														</tr>
 												</tbody>
 											</table>
                       </div>

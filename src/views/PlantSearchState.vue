@@ -92,14 +92,14 @@ export default {
   methods: {
     statesIndex: function (selectedState) {
       console.log("getting plants...");
-      axios.get(`/api/states/${selectedState}`).then((response) => {
+      axios.get(`https://bulbbackend.herokuapp.com/api/states/${selectedState}`).then((response) => {
         console.log(response.data);
         this.plants = response.data;
       });
     },
     plantsIndex: function () {
       console.log("getting plants...");
-      axios.get("/api/plants").then((response) => {
+      axios.get("https://bulbbackend.herokuapp.com/api/plants").then((response) => {
         console.log(response.data);
         this.allplants = response.data;
       });

@@ -112,7 +112,7 @@ export default {
     };
   },
   created: function () {
-    axios.get("/api/plants/" + this.$route.params.id).then((response) => {
+    axios.get("https://bulbbackend.herokuapp.com/api/plants/" + this.$route.params.id).then((response) => {
       console.log(response.data);
       this.plant = response.data;
     });
@@ -135,7 +135,7 @@ export default {
         plant_id: this.plant.id,
         status: this.gardenStatus,
       };
-      axios.post("/api/gardens", params).then((response) => {
+      axios.post("https://bulbbackend.herokuapp.com/api/gardens", params).then((response) => {
         console.log("adding to garden...", response.data);
       });
     },

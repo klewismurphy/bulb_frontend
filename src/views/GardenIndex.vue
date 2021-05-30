@@ -92,7 +92,7 @@ export default {
   methods: {
     gardenIndex: function () {
       console.log("getting garden...");
-      axios.get("/api/gardens").then((response) => {
+      axios.get("https://bulbbackend.herokuapp.com/api/gardens").then((response) => {
         console.log(response.data);
         this.gardens = response.data;
       });
@@ -108,7 +108,7 @@ export default {
         notes: garden.notes,
       };
       axios
-        .patch("/api/gardens/" + garden.id, params)
+        .patch("https://bulbbackend.herokuapp.com/api/gardens/" + garden.id, params)
         .then((response) => {
           console.log("updating garden...", response.data);
           this.currentGarden = {};
@@ -120,7 +120,7 @@ export default {
     deletePlant: function (garden) {
       console.log("deleting plant from garden...");
       axios
-        .delete("/api/gardens/" + garden.id)
+        .delete("https://bulbbackend.herokuapp.com/api/gardens/" + garden.id)
         .then((response) => {
           console.log(response.data);
         })
